@@ -31,23 +31,24 @@ export default function Header() {
     {
       id: "education",
       icon: FaGraduationCap,
-      text: "Education and Work experience",
-      path: "/education",
+      text: "Education & Work experience",
+      path: "/education&experience",
     },
     { id: "skills", icon: FaCode, text: "Skills", path: "/skills" },
-    {
+        /* TODO Add dissertation Projects section */
+/*  {
       id: "projects",
       icon: FaLaptopCode,
-      text: "Projects",
+      text: "Dissertation Project",
       path: "/projects",
-    },
+    },*/
       /* TODO IMPORTANT Remove or Update experience section */
-          {
+  /*        {
       id: "experience",
       icon: FaBriefcase,
       text: "Experience",
       path: "/experience",
-    },
+    }, */
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
 

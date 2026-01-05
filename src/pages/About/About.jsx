@@ -4,7 +4,7 @@ import TiltedCard from '@/components/ui/custom/tilted-card.jsx';
 export default function About() {
   return (
     <>
-      <section id="about" className="py-16 md:py-32  text-white bg-[#04081A]">
+      <section id="about" className="py-8 md:py-8  text-white bg-[#04081A]">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
             {/* TODO Edit this text to update the content as needed */}
@@ -74,8 +74,8 @@ export default function About() {
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    {/* TODO Update this quote */}
-                    Insert quote here
+                    {/* TODO IMPORTANT Update this quote */}
+                    <span className="font-bold">Favourite Quote:</span> “A man without a goal is like a ship without a rudder”
                   </p>
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">Ben Mulligan</cite>

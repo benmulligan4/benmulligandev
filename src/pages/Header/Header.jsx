@@ -13,10 +13,13 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
-  const [activeLink, setActiveLink] = useState(() => {
-    const path = location.pathname.substring(1) || "home";
-    return path;
-  });
+
+const [activeLink, setActiveLink] = useState("home");
+
+useEffect(() => {
+  const hashPath = location.hash?.replace("#/", "") || "home";
+  setActiveLink(hashPath === "" ? "home" : hashPath);
+}, [location]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -61,7 +64,13 @@ export default function Header() {
           <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
-              <Link to="/" className="text-white font-bold">Portfolio</Link>
+              <Link
+                to="/"
+                onClick={() => setActiveLink("home")}
+                className="text-white font-bold"
+              >
+                Portfolio
+              </Link>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"

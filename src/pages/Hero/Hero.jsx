@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
 import "@/assets/css/custom.css"
 import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
 /*TODO Remove this line*/
-import SparklesText from "@/components/ui/sparkles-text";
-import { FlipWords } from "@/components/ui/flip-words";
+import {FlipWords} from "@/components/ui/flip-words";
+
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
@@ -264,7 +264,21 @@ const profile = {
                   Software Developer @ Virgin Money 🏦
                   <br />First Class Honours BSc (Newcastle University) 🎓
                   <br />Automotive manufacturing & FinTech Experience 🚘💳
-                  <br />Fluent in English 🇬🇧 | Spanish 🇪🇸
+                  <br />
+                  <span className="flex items-center gap-1">
+                    Fluent in English
+                    <img
+                      src="/English flag.png"
+                      alt="English Flag"
+                      className="w-6 h-4 object-contain"
+                    />
+                    | Spanish
+                    <img
+                      src="/Spanish flag.png"
+                      alt="Spanish Flag"
+                      className="w-6 h-4 object-contain"
+                    />
+                  </span>
                 </p>
 
                 {/*
